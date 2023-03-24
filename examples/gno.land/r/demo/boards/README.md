@@ -29,10 +29,10 @@ NOTE: You can generate 24 words with any good bip39 generator.
 ### Create a new account using your mnemonic.
 
 ```bash
-./build/gnokey add KEYNAME --recover
+./build/gnokey add --recover KEYNAME
 ```
 
-NOTE: `KEYNAME` is your key identifier, and should be changed.
+NOTE: `KEYNAME` is your key identifier, and should be changed. think of it as a name for an account or wallet. You will be prompted to enter your mnemonic.
 
 ### Verify that you can see your account locally.
 
@@ -45,7 +45,7 @@ NOTE: `KEYNAME` is your key identifier, and should be changed.
 ### Get your current balance, account number, and sequence number.
 
 ```bash
-./build/gnokey query auth/accounts/ACCOUNT_ADDR --remote gno.land:36657
+./build/gnokey query --remote gno.land:36657 auth/accounts/ACCOUNT_ADDR
 ```
 
 NOTE: you can retrieve your `ACCOUNT_ADDR` with `./build/gnokey list`.
